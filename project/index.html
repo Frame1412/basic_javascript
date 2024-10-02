@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมหารค่าข้าว</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>โปรแกรมหารค่าข้าว</h1>
+
+        <!-- ฟอร์มสำหรับกรอกรายการอาหารและราคา -->
+        <div class="form-group">
+            <label for="itemName">ชื่อรายการอาหาร:</label>
+            <input type="text" id="itemName" placeholder="กรอกชื่อรายการอาหาร">
+        </div>
+
+        <div class="form-group">
+            <label for="itemPrice">ราคาของอาหาร:</label>
+            <input type="number" id="itemPrice" placeholder="กรอกราคาอาหาร" step="any">
+        </div>
+
+        <button class="add-btn" onclick="addItem()">เพิ่มรายการอาหาร</button>
+
+        <!-- แสดงรายการอาหาร -->
+        <div class="food-list">
+            <h2>รายการอาหาร:</h2>
+            <ul id="foodList"></ul>
+        </div>
+
+        <!-- แสดงราคารวมทั้งหมด -->
+        <h2 id="totalAmount">ราคารวมทั้งหมด: 0 บาท</h2>
+
+        <!-- ฟอร์มสำหรับกรอกจำนวนคน -->
+        <div class="form-group">
+            <label for="peopleCount">จำนวนคน:</label>
+            <input type="number" id="peopleCount" placeholder="กรอกจำนวนคน" step="1">
+        </div>
+
+        <button class="calculate-btn" onclick="calculateSplit()">คำนวณ</button>
+
+        <!-- แสดงผลลัพธ์ -->
+        <h2 id="result">แต่ละคนต้องจ่าย: </h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
